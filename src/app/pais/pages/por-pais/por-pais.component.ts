@@ -18,6 +18,12 @@ export class PorPaisComponent{
 
   buscar(termino: string){
 
+    if (termino === "") {
+      this.hayError = false;
+      this.paises = [];
+      return;
+    }
+
     this.hayError = false;
     this.termino=termino;
 
